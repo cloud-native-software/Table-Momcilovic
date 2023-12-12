@@ -10,7 +10,7 @@ console.log("MAXIMUM")
 max = Math.max(...arr)
 console.log(max)
 console.log ("Average")
-let sum = 0
+/* let sum = 0
 for  ( let number in arr) {
     sum = sum + number
 }
