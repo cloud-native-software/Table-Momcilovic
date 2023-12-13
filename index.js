@@ -1,18 +1,16 @@
 console.log("Array")
-let arr = [1,2,3,4,5,6,7,8,9]
+let arr = [1, 3, 23, -2, 23232, 2132, 65, 7, 8]
 console.log(arr)
-
-console.log("MINIMUM")
-min = Math.min(...arr)
-console.log(min)
-
-console.log("MAXIMUM")
-max = Math.max(...arr)
-console.log(max)
-console.log ("Average")
-/* let sum = 0
-for  ( let number in arr) {
-    sum = sum + number
+let min = arr[0]
+let max = arr[0]
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i]< min){
+        min = arr[i]
+        
+    }if (arr[i]>max){
+        max = arr[i]
+        
+    }
 }
-average = sum / arr.lenght
-console.log(average)
+console.log('min je ' +min)
+console.log('max je ' +max)
