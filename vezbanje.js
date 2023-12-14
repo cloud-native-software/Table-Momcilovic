@@ -43,6 +43,8 @@ if (list.length === 0) {
                         rl.question ('Please Write the index number of the element', (indexToDelete) =>{
                             list.splice(indexToDelete, 1)
                         })
+                        console.list()
+                        break
 
                     default:
                         console.log ('Type number from 1 to 3 ')
