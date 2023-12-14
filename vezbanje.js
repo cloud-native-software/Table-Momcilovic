@@ -48,7 +48,14 @@ function enter_number() {
             ascending_sort()
             
             const jsonData = JSON.stringify(list)
-            console.log(jsonData)
+            fs.writeFile('.mylist.json',jsonData, (err)=> {
+                if (err){
+                    console.log (err)
+                }else {
+                    console.log ('File succesfully written')
+                }
+                
+            })
             rl.close()
 
         }
@@ -57,10 +64,10 @@ function enter_number() {
         }else {
             n.push(number)
         }
+    })} 
+    
+    
 
-    }
-    )
-}
 
 function descending_sort(){
     list.sort((a, b) => b - a);
@@ -70,5 +77,4 @@ function ascending_sort(){
     list.sort((a, b) => a - b);
     console.log("Sortirani brojevi od najmanjeg ka najvecem", list)       
 }
-
-
+    
