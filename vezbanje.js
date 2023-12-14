@@ -1,4 +1,6 @@
 const readline = require('readline');
+const fs = require ('fs')
+
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -42,6 +44,11 @@ function enter_number() {
             console.log ('Average is :'+ avg)
             console.log ('Parni brojevi su:'+ p)
             console.log ('Neparni brojevi su :'+ n)
+            descending_sort()
+            ascending_sort()
+            
+            const jsonData = JSON.stringify(list)
+            console.log(jsonData)
             rl.close()
 
         }
@@ -53,6 +60,15 @@ function enter_number() {
 
     }
     )
+}
+
+function descending_sort(){
+    list.sort((a, b) => b - a);
+    console.log("Sortirani brojevi od najveceg ka najmanjem", list)       
+}
+function ascending_sort(){
+    list.sort((a, b) => a - b);
+    console.log("Sortirani brojevi od najmanjeg ka najvecem", list)       
 }
 
 
